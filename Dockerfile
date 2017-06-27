@@ -6,7 +6,8 @@
 FROM phusion/baseimage:0.9.22
 
 # Set maintainer
-MAINTAINER Zhichun Wu <zhicwu@gmail.com>
+MAINTAINER Brandon Jackson <usbrandon@gmail.com>
+# Forked from Zhichun Wu <zhicwu@gmail.com>
 
 # Set environment variables
 ENV LANG="en_US.UTF-8" LANGUAGE="en_US.UTF-8" LC_ALL="en_US.UTF-8" TERM=xterm JAVA_VERSION=8 JAVA_HOME=/usr/lib/jvm/java-8-oracle \
@@ -32,7 +33,7 @@ RUN locale-gen en_US.UTF-8 \
 		&& apt-get install -y --allow-unauthenticated software-properties-common \
 			wget tzdata net-tools curl iputils-ping iotop iftop tcpdump lsof htop iptraf \
 			oracle-java${JAVA_VERSION}-installer oracle-java${JAVA_VERSION}-unlimited-jce-policy \
-		&& printf '12\n10\n' | dpkg-reconfigure -f noninteractive tzdata \
+                && printf '2\n37\n' | dpkg-reconfigure -f noninteractive tzdata \
 		&& wget -O ${JMX_EXPORTER_FILE} http://central.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/${JMX_EXPORTER_VERSION}/jmx_prometheus_javaagent-${JMX_EXPORTER_VERSION}.jar \
 		&& apt-get clean \
 		&& rm -rf /var/lib/apt/lists/* /var/cache/oracle-jdk8-installer $JAVA_HOME/*.zip
