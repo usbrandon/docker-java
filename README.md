@@ -1,11 +1,11 @@
-# docker-java
-## Phusion/baseimage:0.9.22 image with Oracle JDK 8.0 build 131 installed.
+## docker-java
+# Phusion/baseimage:0.9.22 image with Oracle JDK 8.0 build 131 installed.
 
 * Includes the JMX to Prometheus exporter v0.9/2017-03-21
 * US English UTF8 Locale is set
 * tzdata set to America/Chicago
 
-## Intent:
+# Intent:
 This JDK image is probably suitable for most any purpose including a properly adjusted Ubuntu 16.04 for running server processes reliably.
 https://github.com/phusion/baseimage-docker/tree/0.9.22
 
@@ -18,5 +18,5 @@ Included in this image:
 Not included in this image:
     [Grafana](https://grafana.com/dashboards/893)
 
-## Credits:
-Zhichun Wu created the original base image here.
+# Credits:
+[Zhichun Wu](https://github.com/zhicwu/docker-java) created the original base [image](https://hub.docker.com/r/zhicwu/java/).
